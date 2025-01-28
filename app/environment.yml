@@ -1,0 +1,18 @@
+name: doc_insight
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python
+  - pip
+  - ipykernel
+  - conda
+  - streamlit
+  - openai
+  - scikit-learn
+  - beautifulsoup4
+  - fpdf
+  - python-docx
+  - numpy
+  - pypdf2
+  - tiktoken
