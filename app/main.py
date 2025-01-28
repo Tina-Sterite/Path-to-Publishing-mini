@@ -2,7 +2,6 @@ import streamlit as st
 from streamlit.runtime.uploaded_file_manager import UploadedFile
 from typing import List
 
-from clustered_summary import ClusteredSummary
 from pdf_document import PdfDocument
 from summary import Summary
 from utils import count_tokens
@@ -56,11 +55,7 @@ def summarize_files(uploaded_files: List[UploadedFile], export_to_docx: bool):
 
 def run_summary(combined_text: str):
     tokens = count_tokens(combined_text)
-
-    if tokens > 100_000:
-        return ClusteredSummary(combined_text).get_summary()
-    else:
-        return Summary(combined_text).get_summary()
+    return Summary(combined_text).get_summary()
 
 
 if __name__ == "__main__":

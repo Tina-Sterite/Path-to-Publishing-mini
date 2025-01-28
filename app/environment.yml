@@ -9,7 +9,6 @@ dependencies:
   - conda
   - streamlit
   - openai
-  - scikit-learn
   - beautifulsoup4
   - fpdf
   - python-docx
